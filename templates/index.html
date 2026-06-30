@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Job Posting Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Fake Job Posting Detection</h1>
+
+<form action="/predict" method="POST">
+
+<input type="text"
+name="title"
+placeholder="Job Title"
+required>
+
+<textarea
+name="company"
+placeholder="Company Profile"></textarea>
+
+<textarea
+name="description"
+placeholder="Job Description"
+required></textarea>
+
+<textarea
+name="requirements"
+placeholder="Requirements"></textarea>
+
+<textarea
+name="benefits"
+placeholder="Benefits"></textarea>
+
+<button type="submit">
+
+Predict
+
+</button>
+
+</form>
+
+{% if prediction %}
+
+<div class="result">
+
+{{ prediction }}
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

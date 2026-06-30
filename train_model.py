@@ -136,3 +136,11 @@ joblib.dump(lr_model, "model/fake_job_model.pkl")
 joblib.dump(vectorizer, "model/vectorizer.pkl")
 
 print("\nModel Saved Successfully!")
+
+with open("model_results.txt", "w") as file:
+
+    file.write("===== Logistic Regression =====\n")
+    file.write(classification_report(y_test, lr_pred))
+
+    file.write("\n\n===== Naive Bayes =====\n")
+    file.write(classification_report(y_test, nb_pred))

@@ -1,0 +1,20 @@
+===== Logistic Regression =====
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98      3395
+           1       1.00      0.43      0.60       181
+
+    accuracy                           0.97      3576
+   macro avg       0.99      0.71      0.79      3576
+weighted avg       0.97      0.97      0.97      3576
+
+
+===== Naive Bayes =====
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97      3395
+           1       0.00      0.00      0.00       181
+
+    accuracy                           0.95      3576
+   macro avg       0.47      0.50      0.49      3576
+weighted avg       0.90      0.95      0.92      3576
